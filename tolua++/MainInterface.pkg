@@ -1,0 +1,18 @@
+class MainInterface : public CCLayer
+{
+	virtual bool init();  
+
+	static CCScene* scene();
+
+	static MainInterface* create();
+
+	bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+	void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+	void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+
+	void menuCallback(CCObject* pSender);
+	void menuButtonCallback(CCObject* pSender);	
+
+	
+	CCActionInterval* createAnimFramsAction(char* sprSheetName, CCNode* nodeItem, CCPoint pos, float dur, int frams, int index);
+};
